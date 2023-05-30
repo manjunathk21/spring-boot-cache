@@ -1,0 +1,138 @@
+{
+  "projectInfo": {
+    "name": "assortment-commons_assortment-truth-service",
+    "applicationName": "assortment-truth-service",
+    "versionStrategy": "tracker",
+    "fmsNumber": "IT-08106",
+    "cdTemplate": "CD0001458",
+    "language": "java",
+    "flowSubString": "assortment-commons_"
+  },
+  "artifact": {
+    "artifactoryDomain": "https://maven.artifactory.homedepot.com/artifactory",
+    "artifactoryRepoKey": "libs-release",
+    "artifactoryRepoKeySnapshot": "libs-snapshot",
+    "artifactoryGroup": "com/homedepot/mm/rd/assortment/commons",
+    "baseName": "assortment-truth-service",
+    "artifactBuildDir": "build/libs/",
+    "artifactType": "jar"
+  },
+  "viper": {
+    "foldersToScan": "src",
+    "emailList": "u1z9b9v7z8x2f0a2@thdengops.slack.com"
+  },
+  "qualityhub" : {
+    "app_id" : "9c4bb183-9fa1-4c38-8d64-ffbb2b218f42"
+  },
+  "github": {
+    "org": "assortment-commons",
+    "repo": "assortment-truth-service",
+    "URL": "https://github.homedepot.com/api/v3/repos"
+  },
+  "tracker": {
+    "projectId": 1658395
+  },
+  "environments": {
+    "develop": {
+      "cf": {
+        "apiEndpoint": "api.run-np.homedepot.com",
+        "domain": "apps-np.homedepot.com",
+        "space": "development",
+        "org": "assortment-commons"
+      },
+      "artifactCategory": "snapshot",
+      "manualDeployEnvs": [
+        "develop"
+      ],
+      "manualDeployLink": "www.google.com",
+      "associatedBranchName": "master",
+      "createChange": "True",
+      "snowfield-lifecycle": "uat"
+    },
+    "q2": {
+      "cf": {
+        "apiEndpoint": "api.run-np.homedepot.com",
+        "domain": "apps-np.homedepot.com",
+        "space": "q2",
+        "org": "assortment-commons"
+      },
+      "artifactCategory": "snapshot",
+      "manualDeployEnvs": [
+        "develop"
+      ],
+      "manualDeployLink": "www.google.com",
+      "associatedBranchName": "master",
+      "createChange": "True",
+      "snowfield-lifecycle": "uat"
+    },
+    "release": {
+      "cf": {
+        "apiEndpoint": "api.run-np.homedepot.com",
+        "domain": "apps-np.homedepot.com",
+        "space": "QA",
+        "org": "assortment-commons"
+      },
+      "artifactCategory": "snapshot",
+      "manualDeployEnvs": [
+        "develop"
+      ],
+      "manualDeployLink": "www.google.com",
+      "associatedBranchName": "master",
+      "createChange": "True",
+      "snowfield-lifecycle": "uat"
+    },
+    "acceptance": {
+      "cf": {
+        "apiEndpoint": "api.run-np.homedepot.com",
+        "domain": "apps-np.homedepot.com",
+        "space": "acceptance",
+        "org": "assortment-commons"
+      },
+      "artifactCategory": "snapshot",
+      "manualDeployEnvs": [
+        "develop"
+      ],
+      "manualDeployLink": "www.google.com",
+      "associatedBranchName": "master",
+      "createChange": "True",
+      "snowfield-lifecycle": "uat"
+    },
+    "e2e": {
+      "cf": {
+        "apiEndpoint": "api.run-np.homedepot.com",
+        "domain": "apps-np.homedepot.com",
+        "space": "e2e",
+        "org": "assortment-commons"
+      },
+      "artifactCategory": "snapshot",
+      "manualDeployEnvs": [
+        "e2e"
+      ],
+      "manualDeployLink": "www.google.com",
+      "associatedBranchName": "master",
+      "createChange": "True",
+      "snowfield-lifecycle": "uat"
+    },
+    "prod": {
+      "cf": {
+        "apiEndpoint": "api.run-zb.homedepot.com",
+        "domain": "apps-zb.homedepot.com",
+        "space": "PR",
+        "org": "assortment-commons"
+      },
+      "artifactCategory": "snapshot",
+      "manualDeployEnvs": [
+        "prod"
+      ],
+      "manualDeployLink": "www.google.com",
+      "associatedBranchName": "master",
+      "createChange": "True",
+      "snowfield-lifecycle": "pr"
+    }
+  },
+  "slack": {
+    "channel": "#assortment-truth-ci",
+    "botName": "DeployBot",
+    "emoji": ":robot_face:"
+  }
+}

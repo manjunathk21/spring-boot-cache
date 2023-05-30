@@ -1,0 +1,25 @@
+---
+applications:
+  - name: 
+    host: 
+    instances: 2
+    memory: 2g
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
+    stack: cflinuxfs3
+    path: ./build/libs/app.jar
+    env:
+      version: REPLACEME
+      TZ: America/New_York
+      JBP_CONFIG_APP_DYNAMICS_AGENT: '[ version: 4.5.+ ]'
+      JBP_CONFIG_DEBUG: '{enabled: true}'
+      JAVA_OPTS:
+        -Dappdynamics.http.proxyHost=
+        -Dappdynamics.http.proxyPort=
+        -Dhttp.proxyHost=
+        -Dhttps.proxyHost=
+        -Dhttps.proxyPort=
+        -Dhttp.proxyPort=
+      SPRING_PROFILES_ACTIVE: acceptance
+services:
+  - appdynamics
+  - app-config

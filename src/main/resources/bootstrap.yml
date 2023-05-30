@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      uri: https://
+
+---
+spring:
+  profiles: production
+  cloud:
+    config:
+      uri: https://

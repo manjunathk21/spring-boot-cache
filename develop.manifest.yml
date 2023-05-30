@@ -1,0 +1,25 @@
+---
+applications:
+  - name: assortment-truth-service
+    host: assortment-truth-service-development
+    instances: 1
+    memory: 2g
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
+    stack: cflinuxfs3
+    path: ./build/libs/assortment-truth-service.jar
+    env:
+      version: REPLACEME
+      TZ: America/New_York
+      JBP_CONFIG_APP_DYNAMICS_AGENT: '[ version: 4.5.+ ]'
+      JBP_CONFIG_DEBUG: '{enabled: true}'
+      JAVA_OPTS:
+        -Dappdynamics.http.proxyHost=thd-svr-proxy-qa.homedepot.com
+        -Dappdynamics.http.proxyPort=9191
+        -Dhttp.proxyHost=thd-svr-proxy-qa.homedepot.com
+        -Dhttps.proxyHost=thd-svr-proxy-qa.homedepot.com
+        -Dhttps.proxyPort=9191
+        -Dhttp.proxyPort=9191
+      SPRING_PROFILES_ACTIVE: development
+services:
+  - appdynamics
+  - assortment-truth

@@ -1,0 +1,6 @@
+swagger:
+  basePackage: com.comp.dept.service.controller
+
+spring:
+  application:
+    name: Spring-boot-Cache
